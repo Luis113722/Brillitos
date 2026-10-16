@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brillitos — Línea Capilar | Despierta tu Luz</title>
+  <meta name="description" content="Línea capilar botánica y natural con Romero, Canela, Jengibre, Cafeína y Aceite de Aguacate. Nutrición intensa, brillo deslumbrante y crecimiento desde la raíz.">
+  <link rel="icon" type="image/png" href="Archivos/Logo Brillitos.PNG">
+
+  <!-- Google Fonts: Playfair Display, Plus Jakarta Sans, Cormorant Garamond -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons for polished UI -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Sparkle Canvas for gentle ambient golden sparkles -->
+  <canvas id="sparkle-canvas"></canvas>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="announcement-content">
+      <span class="sparkle-icon">✨</span>
+      <span>Fórmulas 100% Libres de Sal y Crueldad Animal • Envíos a toda Colombia • <strong>Despierta tu luz</strong></span>
+      <span class="sparkle-icon">✨</span>
+    </div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="brand-logo">
+        <img src="Archivos/Logo nombre brillitos.PNG" alt="Brillitos Línea Capilar" class="logo-img">
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#beneficios" class="nav-link">Beneficios</a>
+        <a href="#productos" class="nav-link">Colección</a>
+        <a href="#rutina" class="nav-link">Rutina Capilar</a>
+        <a href="#diagnostico" class="nav-link highlight">Diagnóstico Capilar</a>
+        <a href="#ingredientes" class="nav-link">Ingredientes</a>
+        <a href="#contacto" class="nav-link">Contacto</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Instagram Link -->
+        <a href="https://instagram.com/bril_litos29" target="_blank" rel="noopener" class="nav-icon-btn" title="Instagram @bril_litos29">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <!-- Cart Button -->
+        <button class="cart-toggle-btn" id="cart-toggle-btn" aria-label="Ver bolsa de compras">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-badge" id="cart-count">0</span>
+        </button>
+
+        <!-- WhatsApp Direct CTA -->
+        <a href="https://wa.me/573233299764?text=Hola%20Brillitos%20%E2%9C%A8%20Me%20gustar%C3%ADa%20recibir%20asesor%C3%ADa%20personalizada%20sobre%20sus%20productos%20capilares" target="_blank" rel="noopener" class="btn-primary-sm">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span>Asesoría</span>
+        </a>
+
+        <!-- Mobile Menu Hamburger -->
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Abrir menú">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="hero">
+    <div class="hero-bg-glow"></div>
+    <div class="hero-container">
+      
+      <div class="hero-text-col">
+        <div class="hero-badge">
+          <img src="Archivos/Logo Brillitos.PNG" alt="Emblema Brillitos" class="mini-sparkle">
+          <span>El Secreto del Crecimiento & Brillo Infinito</span>
+        </div>
+
+        <h1 class="hero-title">
+          Despierta la <span class="text-gold-gradient">Luz y Vitalidad</span> de tu Cabello
+        </h1>
+
+        <p class="hero-description">
+          Rituales botánicos artesanales formulados con <strong>Romero fresco, Canela, Jengibre, Cebolla y Cafeína estimulante</strong>. Nutrición pura y libre de sal creada para empoderar cada hebra, definir ondas, rizos y revitalizar cabellos exigentes.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#productos" class="btn-luxury">
+            <span>Ver Productos</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="#diagnostico" class="btn-secondary">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <span>Test Capilar Gratis</span>
+          </a>
+        </div>
+
+        <!-- Trust Badges -->
+        <div class="hero-trust-grid">
+          <div class="trust-item">
+            <div class="trust-icon"><i class="fa-solid fa-seedling"></i></div>
+            <div class="trust-info">
+              <strong>100% Botánico</strong>
+              <span>Infusión natural pura</span>
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon"><i class="fa-solid fa-paw"></i></div>
+            <div class="trust-info">
+              <strong>Cruelty Free</strong>
+              <span>Libre de crueldad</span>
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon"><i class="fa-solid fa-droplet-slash"></i></div>
+            <div class="trust-info">
+              <strong>Sin Sal ni Sulfatos</strong>
+              <span>Cuidado ultrasuave</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual Col -->
+      <div class="hero-visual-col">
+        <div class="visual-card-wrapper">
+          <div class="card-glow-ring"></div>
+          <div class="visual-card-main">
+            <img src="Archivos/modelo.jpeg" alt="Modelos luciendo cabello sano y radiante con Brillitos" class="hero-model-img">
+            <div class="visual-card-overlay">
+              <span class="community-pill">
+                <i class="fa-brands fa-instagram"></i> @bril_litos29
+              </span>
+              <p class="model-quote">"Tu cabello también merece amor y constancia"</p>
+            </div>
+          </div>
+
+          <!-- Floating Floating Badges -->
+          <div class="floating-badge badge-top-right">
+            <div class="floating-icon"><i class="fa-solid fa-sparkles"></i></div>
+            <div>
+              <p class="badge-title">Brillo Espejo</p>
+              <p class="badge-subtitle">Nutrición desde la raíz</p>
+            </div>
+          </div>
+
+          <div class="floating-badge badge-bottom-left">
+            <div class="floating-icon"><i class="fa-solid fa-heart"></i></div>
+            <div>
+              <p class="badge-title">Hecho con Amor</p>
+              <p class="badge-subtitle">Para ondas, rizos y lisos</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Scroll Indicator -->
+    <a href="#beneficios" class="scroll-indicator" aria-label="Bajar a beneficios">
+      <span>Descubre la magia</span>
+      <i class="fa-solid fa-chevron-down"></i>
+    </a>
+  </section>
+
+  <!-- Brand Philosophy / Beneficios -->
+  <section class="section-padding benefits-section" id="beneficios">
+    <div class="section-container">
+      <div class="section-header text-center">
+        <span class="section-tag">NUESTRA ESENCIA</span>
+        <h2 class="section-title">El Cuidado que tu Cabello Merece</h2>
+        <div class="gold-divider"></div>
+        <p class="section-subtitle">
+          Cada fórmula de Brillitos combina la sabiduría ancestral de las plantas con el rigor cosmético moderno, asegurando hebras fortalecidas, libres de frizz y con un resplandor inigualable.
+        </p>
+      </div>
+
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon-box">
+            <i class="fa-solid fa-mug-hot"></i>
+          </div>
+          <h3>Cafeína Estimulante</h3>
+          <p>Activa la microcirculación capilar en el folículo, reduciendo la caída y acelerando el crecimiento de cabello nuevo y fuerte.</p>
+          <span class="benefit-number">01</span>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon-box">
+            <i class="fa-solid fa-leaf"></i>
+          </div>
+          <h3>Alquimia Botánica</h3>
+          <p>Extractos puros de Romero, Canela, Jengibre y Clavos de olor que oxigenan y purifican el cuero cabelludo con propiedades antioxidantes.</p>
+          <span class="benefit-number">02</span>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon-box">
+            <i class="fa-solid fa-shield-heart"></i>
+          </div>
+          <h3>Fórmula Sin Sal (500ml)</h3>
+          <p>Limpia sin despojar al cabello de su hidratación natural. Ideal para cabellos naturales, decolorados, tinturados o con tratamientos.</p>
+          <span class="benefit-number">03</span>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon-box">
+            <i class="fa-solid fa-gem"></i>
+          </div>
+          <h3>Nutrición y Brillo Espejo</h3>
+          <p>Elixir de Aceite de Aguacate que sella la cutícula, aporta elasticidad sedosa y combate el frizz en cualquier clima.</p>
+          <span class="benefit-number">04</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Showcase Products / Colección -->
+  <section class="section-padding products-section" id="productos">
+    <div class="section-container">
+      <div class="section-header text-center">
+        <span class="section-tag">COLECCIÓN CAPILAR</span>
+        <h2 class="section-title">Nuestros Productos Estrella</h2>
+        <div class="gold-divider"></div>
+        <p class="section-subtitle">
+          Fórmulas generosas de 500ml y elixires concentrados diseñados para transformar tu melena desde la primera aplicación.
+        </p>
+      </div>
+
+      <!-- Filter Controls -->
+      <div class="filter-controls">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="limpieza">Limpieza & Cuidado</button>
+        <button class="filter-btn" data-filter="tratamiento">Tratamiento & Fortalecimiento</button>
+        <button class="filter-btn" data-filter="kits">Kits Completos</button>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="products-grid" id="products-grid">
+
+        <!-- Product 1: Shampoo Capilar con Cafeína & Romero -->
+        <article class="product-card" data-category="limpieza">
+          <div class="product-tag-badge">Bestseller</div>
+          <div class="product-img-box">
+            <img src="Archivos/shampoo.jpeg" alt="Shampoo Capilar Brillitos con Romero y Cafeína" class="product-img">
+            <button class="quick-view-btn" onclick="openProductModal('shampoo')">
+              <i class="fa-regular fa-eye"></i> Ver Detalles
+            </button>
+          </div>
+          <div class="product-details">
+            <span class="product-size">500 ml • Fórmula Sin Sal</span>
+            <h3 class="product-name">Shampoo Capilar Estimulante</h3>
+            <p class="product-desc">Romero, Canela, Jengibre, Clavito de Olor, Cebolla y Cafeína pura para frenar la caída y potenciar el crecimiento.</p>
+            <div class="product-badges-mini">
+              <span><i class="fa-solid fa-check"></i> Sin Sal</span>
+              <span><i class="fa-solid fa-check"></i> Cafeína Activa</span>
+            </div>
+            <div class="product-footer">
+              <div class="price-container">
+                <span class="price-label">Precio</span>
+                <span class="price-amount">$35.000 COP</span>
+              </div>
+              <button class="btn-add-cart" onclick="addToCart('shampoo', 'Shampoo Capilar Estimulante (500ml)', 35000, 'Archivos/shampoo.jpeg')">
+                <i class="fa-solid fa-plus"></i> Añadir
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 2: Acondicionador Desenredo de Seda -->
+        <article class="product-card" data-category="limpieza">
+          <div class="product-tag-badge">Suavidad Extrema</div>
+          <div class="product-img-box">
+            <img src="Archivos/Acindicionador2.jpeg" alt="Acondicionador Capilar Romero Brillitos" class="product-img">
+            <button class="quick-view-btn" onclick="openProductModal('acondicionador')">
+              <i class="fa-regular fa-eye"></i> Ver Detalles
+            </button>
+          </div>
+          <div class="product-details">
+            <span class="product-size">500 ml • Romero & Mantecas Nutritivas</span>
+            <h3 class="product-name">Acondicionador Desenredo de Seda</h3>
+            <p class="product-desc">Suaviza al instante, desenreda sin tirones y deja el cabello manejable, elástico y visiblemente saludable.</p>
+            <div class="product-badges-mini">
+              <span><i class="fa-solid fa-check"></i> Cero Frizz</span>
+              <span><i class="fa-solid fa-check"></i> Sella Cutícula</span>
+            </div>
+            <div class="product-footer">
+              <div class="price-container">
+                <span class="price-label">Precio</span>
+                <span class="price-amount">$35.000 COP</span>
+              </div>
+              <button class="btn-add-cart" onclick="addToCart('acondicionador', 'Acondicionador Romero de Seda (500ml)', 35000, 'Archivos/Acindicionador2.jpeg')">
+                <i class="fa-solid fa-plus"></i> Añadir
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 3: Tónico Capilar Revitalizante -->
+        <article class="product-card" data-category="tratamiento">
+          <div class="product-tag-badge">Tratamiento Raíz</div>
+          <div class="product-img-box">
+            <img src="Archivos/Acondicionador.jpeg" alt="Tónico Capilar Botánico Brillitos" class="product-img">
+            <button class="quick-view-btn" onclick="openProductModal('tonico')">
+              <i class="fa-regular fa-eye"></i> Ver Detalles
+            </button>
+          </div>
+          <div class="product-details">
+            <span class="product-size">Infusión Concentrada • Uso Diario</span>
+            <h3 class="product-name">Tónico Capilar Revitalizante</h3>
+            <p class="product-desc">Romero, Jengibre, Canela y Clavos de Olor. Oxigena el bulbo capilar, fortalece y revitaliza el cuero cabelludo.</p>
+            <div class="product-badges-mini">
+              <span><i class="fa-solid fa-check"></i> Anti-Caída</span>
+              <span><i class="fa-solid fa-check"></i> No enjuagar</span>
+            </div>
+            <div class="product-footer">
+              <div class="price-container">
+                <span class="price-label">Precio</span>
+                <span class="price-amount">$28.000 COP</span>
+              </div>
+              <button class="btn-add-cart" onclick="addToCart('tonico', 'Tónico Capilar Revitalizante', 28000, 'Archivos/Acondicionador.jpeg')">
+                <i class="fa-solid fa-plus"></i> Añadir
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 4: Aceite Elixir Aguacate + Romero -->
+        <article class="product-card" data-category="tratamiento">
+          <div class="product-tag-badge">Brillo Espejo</div>
+          <div class="product-img-box">
+            <img src="Archivos/Est.jpeg" alt="Aceite Elixir de Aguacate y Romero Brillitos" class="product-img">
+            <button class="quick-view-btn" onclick="openProductModal('aceite')">
+              <i class="fa-regular fa-eye"></i> Ver Detalles
+            </button>
+          </div>
+          <div class="product-details">
+            <span class="product-size">Gotero de Precisión • Nutrición Intensa</span>
+            <h3 class="product-name">Aceite de Aguacate + Romero</h3>
+            <p class="product-desc">Nutrición lipídica profunda que sella puntas abiertas, aporta brillo deslumbrante y protege del calor y sol.</p>
+            <div class="product-badges-mini">
+              <span><i class="fa-solid fa-check"></i> Brillo Oro</span>
+              <span><i class="fa-solid fa-check"></i> Puntas Selladas</span>
+            </div>
+            <div class="product-footer">
+              <div class="price-container">
+                <span class="price-label">Precio</span>
+                <span class="price-amount">$30.000 COP</span>
+              </div>
+              <button class="btn-add-cart" onclick="addToCart('aceite', 'Aceite de Aguacate + Romero', 30000, 'Archivos/Est.jpeg')">
+                <i class="fa-solid fa-plus"></i> Añadir
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 5: Kit Rutina Completa Esplendor -->
+        <article class="product-card featured-kit" data-category="kits">
+          <div class="product-tag-badge gold-special">Kit Favorito • Ahorro 15%</div>
+          <div class="product-img-box">
+            <img src="Archivos/rutina capilar.jpg" alt="Kit Completo Rutina Capilar Brillitos" class="product-img">
+            <button class="quick-view-btn" onclick="openProductModal('kit')">
+              <i class="fa-regular fa-eye"></i> Ver Detalles
+            </button>
+          </div>
+          <div class="product-details">
+            <span class="product-size">4 Productos • Rutina Completa de 3 Pasos</span>
+            <h3 class="product-name">Kit Completo "Despierta tu Luz"</h3>
+            <p class="product-desc">Incluye Shampoo (500ml) + Acondicionador (500ml) + Tónico Revitalizante + Aceite de Aguacate & Romero.</p>
+            <div class="product-badges-mini">
+              <span><i class="fa-solid fa-gift"></i> Envío Preferencial</span>
+              <span><i class="fa-solid fa-star"></i> Tratamiento Integral</span>
+            </div>
+            <div class="product-footer">
+              <div class="price-container">
+                <span class="price-old">$128.000 COP</span>
+                <span class="price-amount highlight-price">$110.000 COP</span>
+              </div>
+              <button class="btn-add-cart" onclick="addToCart('kit', 'Kit Completo Despierta tu Luz (4 Productos)', 110000, 'Archivos/rutina capilar.jpg')">
+                <i class="fa-solid fa-plus"></i> Añadir Kit
+              </button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Routine: Tu Rutina Capilar -->
+  <section class="section-padding routine-section" id="rutina">
+    <div class="section-container">
+      
+      <div class="routine-intro-banner">
+        <div class="quote-symbol">❝</div>
+        <p class="quote-text">Cada producto es preparado con mucho amor y dedicación para cuidar y consentir tu cabello.</p>
+        <p class="quote-author">Tu cabello también merece amor y constancia ✨</p>
+      </div>
+
+      <div class="section-header text-center mt-5">
+        <span class="section-tag">EL MÉTODO BRILLITOS</span>
+        <h2 class="section-title">Tu Rutina Capilar en 3 Pasos</h2>
+        <div class="gold-divider"></div>
+        <p class="section-subtitle">
+          Sigue el paso a paso infalible que transforma cabellos apagados o debilitados en melenas abundantes, suaves y brillantes.
+        </p>
+      </div>
+
+      <!-- Routine Interactive Stepper -->
+      <div class="routine-stepper-container">
+        
+        <!-- Step 1 -->
+        <div class="step-card active" data-step="1">
+          <div class="step-number-badge">1</div>
+          <div class="step-icon-round">
+            <i class="fa-solid fa-pump-soap"></i>
+          </div>
+          <h3 class="step-title">Limpieza & Desenredo</h3>
+          <h4 class="step-products">SHAMPOO + ACONDICIONADOR</h4>
+          <p class="step-desc">
+            <strong>Shampoo:</strong> Limpia a profundidad el cuero cabelludo estimulando los folículos con Romero y Cafeína sin resecar la fibra.<br><br>
+            <strong>Acondicionador:</strong> Suaviza, nutre y desenreda instantáneamente sin tirones, devolviendo docilidad y movimiento.
+          </p>
+          <div class="step-tip">
+            <i class="fa-solid fa-lightbulb"></i>
+            <span><strong>Tip:</strong> Masajea suavemente con las yemas en círculos durante 2 minutos.</span>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step-card" data-step="2">
+          <div class="step-number-badge">2</div>
+          <div class="step-icon-round">
+            <i class="fa-solid fa-eye-dropper"></i>
+          </div>
+          <h3 class="step-title">Revitalización & Raíz</h3>
+          <h4 class="step-products">TÓNICO CAPILAR</h4>
+          <p class="step-desc">
+            Infusión activa con <strong>Romero, Jengibre, Canela y Clavos de Olor</strong>.<br><br>
+            Aplica directamente en el cuero cabelludo húmedo o seco. Ayuda a complementar el cuidado folicular, previene el quiebre y fortalece la raíz.
+          </p>
+          <div class="step-tags">
+            <span>Revitalización</span>
+            <span>Cuidado</span>
+            <span>Fortalecimiento</span>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step-card" data-step="3">
+          <div class="step-number-badge">3</div>
+          <div class="step-icon-round">
+            <i class="fa-solid fa-bottle-droplet"></i>
+          </div>
+          <h3 class="step-title">Nutrición & Brillo</h3>
+          <h4 class="step-products">ACEITE AGUACATE + ROMERO</h4>
+          <p class="step-desc">
+            Aporte concentrado de ácidos grasos y antioxidantes naturales.<br><br>
+            Aporta brillo espejo inmediato, suavidad aterciopelada y sella las cutículas protegiendo el cabello de la polución y la resequedad.
+          </p>
+          <div class="step-tags">
+            <span>Nutrición</span>
+            <span>Brillo</span>
+            <span>Suavidad</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Rutina Poster Preview Button -->
+      <div class="routine-action-center text-center">
+        <button class="btn-secondary" onclick="openPosterModal()">
+          <i class="fa-regular fa-image"></i>
+          <span>Ver Infografía Oficial de la Rutina</span>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Interactive Hair Diagnostic Quiz -->
+  <section class="section-padding quiz-section" id="diagnostico">
+    <div class="section-container">
+      <div class="quiz-box-card">
+        
+        <div class="quiz-header">
+          <span class="quiz-badge">TEST PERSONALIZADO EN 60 SEGUNDOS</span>
+          <h2 class="quiz-title">Descubre tu Rutina Brillitos Ideal</h2>
+          <p class="quiz-subtitle">Responde 3 preguntas sencillas y nuestro diagnóstico experto te revelará exactamente qué necesita tu cabello para lucir sano y resplandeciente.</p>
+        </div>
+
+        <!-- Quiz Progress Bar -->
+        <div class="quiz-progress-bar">
+          <div class="quiz-progress-fill" id="quiz-progress"></div>
+        </div>
+
+        <!-- Step 1: Textura -->
+        <div class="quiz-step active" id="quiz-step-1">
+          <h3 class="quiz-question">1. ¿Cuál es el tipo de textura principal de tu cabello?</h3>
+          <div class="quiz-options-grid">
+            <button class="quiz-option-card" onclick="selectQuizOption(1, 'Rizado / Afro', this)">
+              <div class="quiz-option-icon">🌀</div>
+              <div class="quiz-option-text">
+                <strong>Rizado o Afro</strong>
+                <span>Requiere nutrición profunda, hidratación y definición sin frizz.</span>
+              </div>
+            </button>
+            <button class="quiz-option-card" onclick="selectQuizOption(1, 'Ondulado / Mixto', this)">
+              <div class="quiz-option-icon">🌊</div>
+              <div class="quiz-option-text">
+                <strong>Ondulado o Mixto</strong>
+                <span>Raíces con tendencia grasa o puntas secas que buscan equilibrio.</span>
+              </div>
+            </button>
+            <button class="quiz-option-card" onclick="selectQuizOption(1, 'Liso / Delgado', this)">
+              <div class="quiz-option-icon">✨</div>
+              <div class="quiz-option-text">
+                <strong>Liso o Delgado</strong>
+                <span>Busca volumen, fuerza, brillo sin sensación pesada ni grasa.</span>
+              </div>
+            </button>
+            <button class="quiz-option-card" onclick="selectQuizOption(1, 'Tratado / Decolorada', this)">
+              <div class="quiz-option-icon">⚡</div>
+              <div class="quiz-option-text">
+                <strong>Decolorado o Químicamente Tratado</strong>
+                <span>Hebras quebradizas o porosas que demandan reparación intensiva.</span>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <!-- Step 2: Desafío Principal -->
+        <div class="quiz-step" id="quiz-step-2">
+          <h3 class="quiz-question">2. ¿Cuál es tu objetivo o mayor reto capilar actualmente?</h3>
+          <div class="quiz-options-grid">
+            <button class="quiz-option-card" onclick="selectQuizOption(2, 'Frenar Caída y Estimular Crecimiento', this)">
+              <div class="quiz-option-icon">🌱</div>
+              <div class="quiz-option-text">
+                <strong>Crecimiento & Anti-Caída</strong>
+                <span>Quiero estimular el nacimiento y frenar la debilidad folicular.</span>
+              </div>
+            </button>
+            <button class="quiz-option-card" onclick="selectQuizOption(2, 'Resequedad, Puntas Abiertas y Frizz', this)">
+              <div class="quiz-option-icon">🥑</div>
+              <div class="quiz-option-text">
+                <strong>Nutrición & Control de Frizz</strong>
+                <span>Quiero rescatar puntas maltratadas y conseguir tacto de seda.</span>
+              </div>
+            </button>
+            <button class="quiz-option-card" onclick="selectQuizOption(2, 'Falta de Brillo y Opacidad', this)">
+              <div class="quiz-option-icon">💎</div>
+              <div class="quiz-option-text">
+                <strong>Brillo Espejo & Luminosidad</strong>
+                <span>Deseo un cabello radiante que refleje la luz con vitalidad.</span>
+              </div>
+            </button>
+            <button class="quiz-option-card" onclick="selectQuizOption(2, 'Cuidado Integral Completo', this)">
+              <div class="quiz-option-icon">👑</div>
+              <div class="quiz-option-text">
+                <strong>Transformación Total (360°)</strong>
+                <span>Quiero la rutina completa para una melena abundante y sana.</span>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <!-- Step 3: Frecuencia de Lavado -->
+        <div class="quiz-step" id="quiz-step-3">
+          <h3 class="quiz-question">3. ¿Con qué frecuencia acostumbras lavar tu cabello?</h3>
+          <div class="quiz-options-grid">
+            <button class="quiz-option-card" onclick="selectQuizOption(3, 'A diario o día de por medio', this)">
+              <div class="quiz-option-icon">🚿</div>
+              <div class="quiz-option-text">
+                <strong>A diario o día por medio</strong>
+                <span>Necesitas un limpiador suave sin sal que preserve la hidratación.</span>
+              </div>
+            </button>
+            <button class="quiz-option-card" onclick="selectQuizOption(3, '2 a 3 veces por semana', this)">
+              <div class="quiz-option-icon">📅</div>
+              <div class="quiz-option-text">
+                <strong>2 a 3 veces por semana</strong>
+                <span>Frecuencia ideal para alternar tónico capilar y elixires nutritivos.</span>
+              </div>
+            </button>
+            <button class="quiz-option-card" onclick="selectQuizOption(3, '1 vez a la semana', this)">
+              <div class="quiz-option-icon">🌿</div>
+              <div class="quiz-option-text">
+                <strong>1 vez por semana</strong>
+                <span>Cuidado específico para rulos cerrados y texturas afro que retienen hidratación.</span>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <!-- Step Result: Diagnóstico Personalizado -->
+        <div class="quiz-step" id="quiz-result">
+          <div class="quiz-result-box">
+            <div class="result-badge-sparkle">
+              <i class="fa-solid fa-crown"></i>
+            </div>
+            <h3 class="result-headline">¡Tu Diagnóstico Brillitos está Listo!</h3>
+            <p class="result-summary" id="result-summary-text">
+              Para tu textura y objetivos específicos, hemos diseñado el ritual botánico ideal.
+            </p>
+
+            <div class="recommended-routine-card" id="recommended-routine-card">
+              <!-- Injected by JavaScript -->
+            </div>
+
+            <div class="result-actions">
+              <a href="#" id="quiz-whatsapp-btn" target="_blank" rel="noopener" class="btn-whatsapp-order">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>Pedir mi Rutina Recomendada por WhatsApp</span>
+              </a>
+              <button class="btn-restart-quiz" onclick="restartQuiz()">
+                <i class="fa-solid fa-rotate-left"></i> Repetir Test
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Botanical Ingredients Alchemy -->
+  <section class="section-padding ingredients-section" id="ingredientes">
+    <div class="section-container">
+      <div class="section-header text-center">
+        <span class="section-tag">FÓRMULAS VIVAS</span>
+        <h2 class="section-title">El Poder Sagrado de la Naturaleza</h2>
+        <div class="gold-divider"></div>
+        <p class="section-subtitle">
+          Seleccionamos ingredientes nobles con propiedades medicinales y cosméticas comprobadas.
+        </p>
+      </div>
+
+      <div class="ingredients-grid">
+        
+        <div class="ingredient-card">
+          <div class="ingredient-img-wrap">
+            <div class="ingredient-emoji">🌿</div>
+          </div>
+          <h4>Romero Silvestre</h4>
+          <p>El rey botánico del cabello. Estimula la circulación en los folículos, combate la caspa y fortalece la estructura capilar.</p>
+        </div>
+
+        <div class="ingredient-card">
+          <div class="ingredient-img-wrap">
+            <div class="ingredient-emoji">☕</div>
+          </div>
+          <h4>Cafeína Pura</h4>
+          <p>Bloquea la hormona DHT responsable de la caída y prolonga la fase de crecimiento activo del cabello (fase anágena).</p>
+        </div>
+
+        <div class="ingredient-card">
+          <div class="ingredient-img-wrap">
+            <div class="ingredient-emoji">🪵</div>
+          </div>
+          <h4>Canela & Clavos de Olor</h4>
+          <p>Potentes antisépticos y revitalizantes naturales que limpian las impurezas del folículo aportando un aroma irresistible.</p>
+        </div>
+
+        <div class="ingredient-card">
+          <div class="ingredient-img-wrap">
+            <div class="ingredient-emoji">🫚</div>
+          </div>
+          <h4>Jengibre & Cebolla</h4>
+          <p>Ricos en azufre y minerales que nutren la queratina natural, devolviendo elasticidad y grosor a las hebras finas.</p>
+        </div>
+
+        <div class="ingredient-card">
+          <div class="ingredient-img-wrap">
+            <div class="ingredient-emoji">🥑</div>
+          </div>
+          <h4>Aceite de Aguacate</h4>
+          <p>Penetra profundamente en la fibra con vitaminas A, D, E y ácidos grasos monoinsaturados para un brillo espejo incomparable.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Digital Business Card & Presentation -->
+  <section class="section-padding business-card-section" id="tarjeta">
+    <div class="section-container">
+      <div class="section-header text-center">
+        <span class="section-tag">TARJETA OFICIAL</span>
+        <h2 class="section-title">Conecta con la Comunidad Brillitos</h2>
+        <div class="gold-divider"></div>
+        <p class="section-subtitle">
+          Guarda nuestro contacto directo, escanea el código o síguenos en redes para enterarte de tips, testimonios y lanzamientos.
+        </p>
+      </div>
+
+      <div class="digital-card-wrapper">
+        <div class="luxury-business-card">
+          
+          <!-- Card Front / Left Side -->
+          <div class="bcard-left">
+            <div class="bcard-brand">
+              <img src="Archivos/Logo nombre brillitos.PNG" alt="Brillitos Línea Capilar" class="bcard-logo">
+            </div>
+            
+            <div class="bcard-contacts">
+              <a href="https://instagram.com/bril_litos29" target="_blank" rel="noopener" class="bcard-contact-item">
+                <div class="bcard-icon"><i class="fa-brands fa-instagram"></i></div>
+                <div class="bcard-text">
+                  <span class="bcard-label">Instagram Oficial</span>
+                  <span class="bcard-val">@bril_litos29</span>
+                </div>
+              </a>
+
+              <a href="https://wa.me/573233299764?text=Hola%20Brillitos%20%E2%9C%A8%20Vi%20su%20tarjeta%20y%20quiero%20hacer%20un%20pedido" target="_blank" rel="noopener" class="bcard-contact-item">
+                <div class="bcard-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                <div class="bcard-text">
+                  <span class="bcard-label">Línea de Pedidos WhatsApp</span>
+                  <span class="bcard-val">+57 323 3299764</span>
+                </div>
+              </a>
+            </div>
+
+            <p class="bcard-footer-note">✨ Amor, constancia y brillo para tu cabello ✨</p>
+          </div>
+
+          <!-- Card Right / QR Side -->
+          <div class="bcard-right">
+            <div class="qr-box">
+              <!-- High-res QR representation matching tarjetas brillitos.pdf -->
+              <img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https://instagram.com/bril_litos29&color=432616&bgcolor=FAF6EE" alt="Código QR Brillitos" class="qr-img">
+              <span class="qr-caption">Síguenos @bril_litos29</span>
+            </div>
+            <a href="Archivos/tarjetas brillitos.pdf" target="_blank" class="btn-download-card">
+              <i class="fa-solid fa-file-pdf"></i>
+              <span>Ver Tarjeta en PDF</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive WhatsApp Order Drawer (Cart) -->
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="cart-drawer-header">
+      <div class="cart-title-wrap">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <h3>Tu Bolsa Brillitos</h3>
+      </div>
+      <button class="cart-close-btn" id="cart-close-btn" aria-label="Cerrar bolsa">&times;</button>
+    </div>
+
+    <div class="cart-drawer-items" id="cart-items-container">
+      <!-- Items dynamically populated -->
+      <div class="cart-empty-state" id="cart-empty-state">
+        <i class="fa-solid fa-sparkles empty-icon"></i>
+        <p>Tu bolsa de compras está vacía.</p>
+        <span>Agrega productos para armar tu pedido express por WhatsApp.</span>
+      </div>
+    </div>
+
+    <div class="cart-drawer-footer" id="cart-drawer-footer">
+      <div class="cart-subtotal-row">
+        <span>Subtotal Estimado:</span>
+        <strong id="cart-total-amount">$0 COP</strong>
+      </div>
+      <div class="cart-shipping-note">
+        <i class="fa-solid fa-truck-fast"></i> Envíos nacionales seguros a toda Colombia
+      </div>
+
+      <!-- Quick customer details for WhatsApp -->
+      <div class="cart-quick-form">
+        <input type="text" id="cust-name" placeholder="Tu Nombre y Apellido" class="cart-input">
+        <input type="text" id="cust-city" placeholder="Ciudad / Municipio de entrega" class="cart-input">
+      </div>
+
+      <button class="btn-checkout-whatsapp" id="btn-checkout-whatsapp" onclick="sendCartToWhatsApp()">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span>Enviar Pedido por WhatsApp</span>
+      </button>
+    </div>
+  </aside>
+  <div class="cart-overlay" id="cart-overlay"></div>
+
+  <!-- Product Detail Modal -->
+  <div class="modal-overlay" id="product-modal">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="closeProductModal()">&times;</button>
+      <div class="modal-body" id="modal-content">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Routine Poster Modal -->
+  <div class="modal-overlay" id="poster-modal">
+    <div class="modal-card modal-poster-card">
+      <button class="modal-close-btn" onclick="closePosterModal()">&times;</button>
+      <div class="modal-poster-body">
+        <img src="Archivos/rutina capilar.jpg" alt="Rutina Capilar Brillitos Completa" class="poster-full-img">
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact & Footer -->
+  <footer class="footer-section" id="contacto">
+    <div class="footer-top">
+      <div class="section-container footer-grid">
+        
+        <!-- Brand Info -->
+        <div class="footer-col brand-col">
+          <img src="Archivos/Logo nombre brillitos.PNG" alt="Brillitos" class="footer-logo">
+          <p class="footer-tagline">"Despierta tu luz"</p>
+          <p class="footer-bio">
+            Línea capilar botánica creada para brindar amor, constancia y luminosidad infinita a tu cabello. Formulada libre de crueldad y con activos 100% naturales.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://instagram.com/bril_litos29" target="_blank" rel="noopener" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/573233299764" target="_blank" rel="noopener" aria-label="WhatsApp">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Navegación</h4>
+          <ul class="footer-links">
+            <li><a href="#hero">Inicio</a></li>
+            <li><a href="#beneficios">Beneficios Botánicos</a></li>
+            <li><a href="#productos">Catálogo de Productos</a></li>
+            <li><a href="#rutina">Rutina en 3 Pasos</a></li>
+            <li><a href="#diagnostico">Diagnóstico Capilar</a></li>
+          </ul>
+        </div>
+
+        <!-- Direct Contact Details -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Atención & Pedidos</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <div>
+                <strong>Línea Telefónica & WhatsApp:</strong>
+                <a href="tel:+573233299764">323 3299764</a>
+              </div>
+            </li>
+            <li>
+              <i class="fa-brands fa-instagram"></i>
+              <div>
+                <strong>Instagram Oficial:</strong>
+                <a href="https://instagram.com/bril_litos29" target="_blank" rel="noopener">@bril_litos29</a>
+              </div>
+            </li>
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <strong>Cobertura:</strong>
+                <span>Envíos a todo el territorio colombiano</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Promo Newsletter / Cupón -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Únete al Brillo</h4>
+          <p class="footer-subtext">Obtén <strong>10% OFF</strong> en tu primer kit y consejos exclusivos para tu rutina capilar.</p>
+          <div class="newsletter-box">
+            <input type="email" id="newsletter-email" placeholder="Tu correo electrónico" class="newsletter-input">
+            <button class="btn-newsletter" onclick="handleNewsletter()">Suscribirme</button>
+          </div>
+          <span class="newsletter-feedback" id="newsletter-feedback"></span>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="section-container footer-bottom-content">
+        <p>© 2026 Brillitos Línea Capilar. Todos los derechos reservados. Hecho con amor y constancia.</p>
+        <p class="signature-tag">✨ Despierta tu luz ✨</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Quick Button -->
+  <a href="https://wa.me/573233299764?text=Hola%20Brillitos%20%E2%9C%A8%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20productos%20capilares" target="_blank" rel="noopener" class="floating-whatsapp-btn" aria-label="Escribir por WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="floating-tooltip">¿Dudas? Habla con una asesora</span>
+  </a>
+
+  <script src="app.js"></script>
+</body>
+</html>
