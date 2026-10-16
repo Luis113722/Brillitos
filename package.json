@@ -1,0 +1,19 @@
+{
+  "name": "brillitos-linea-capilar",
+  "version": "1.0.0",
+  "description": "Experiencia web interactiva para Brillitos Línea Capilar",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "open": "cmd /c start http://localhost:3000 && node server.js"
+  },
+  "keywords": [
+    "brillitos",
+    "linea-capilar",
+    "cuidado-capilar",
+    "romero",
+    "cafeina"
+  ],
+  "author": "Luis Miguel Canoles",
+  "license": "MIT"
+}
