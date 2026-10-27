@@ -242,7 +242,7 @@
         <button class="filter-btn active" data-filter="all">Todos</button>
         <button class="filter-btn" data-filter="limpieza">Limpieza & Cuidado</button>
         <button class="filter-btn" data-filter="tratamiento">Tratamiento & Fortalecimiento</button>
-        <button class="filter-btn" data-filter="kits">Kits Completos</button>
+        <button class="filter-btn" data-filter="kits">Kits & Combos</button>
       </div>
 
       <!-- Products Grid -->
@@ -252,7 +252,7 @@
         <article class="product-card" data-category="limpieza">
           <div class="product-tag-badge">Bestseller</div>
           <div class="product-img-box">
-            <img src="Archivos/shampoo.jpeg" alt="Shampoo Capilar Brillitos con Romero y Cafeína" class="product-img">
+            <img src="Archivos/Shampoo.jpg" alt="Shampoo Capilar Brillitos con Romero y Cafeína" class="product-img">
             <button class="quick-view-btn" onclick="openProductModal('shampoo')">
               <i class="fa-regular fa-eye"></i> Ver Detalles
             </button>
@@ -270,7 +270,7 @@
                 <span class="price-label">Precio</span>
                 <span class="price-amount">$35.000 COP</span>
               </div>
-              <button class="btn-add-cart" onclick="addToCart('shampoo', 'Shampoo Capilar Estimulante (500ml)', 35000, 'Archivos/shampoo.jpeg')">
+              <button class="btn-add-cart" onclick="addToCart('shampoo', 'Shampoo Capilar Estimulante (500ml)', 35000, 'Archivos/Shampoo.jpg')">
                 <i class="fa-solid fa-plus"></i> Añadir
               </button>
             </div>
@@ -306,11 +306,40 @@
           </div>
         </article>
 
-        <!-- Product 3: Tónico Capilar Revitalizante -->
+        <!-- Product 3: Combo Shampoo + Acondicionador -->
+        <article class="product-card" data-category="limpieza kits">
+          <div class="product-tag-badge gold-special">Dúo Esencial • Oferta</div>
+          <div class="product-img-box">
+            <img src="Archivos/Shampoo+Acondicionador.jpg" alt="Combo Shampoo y Acondicionador Brillitos" class="product-img">
+            <button class="quick-view-btn" onclick="openProductModal('combo')">
+              <i class="fa-regular fa-eye"></i> Ver Detalles
+            </button>
+          </div>
+          <div class="product-details">
+            <span class="product-size">2 Productos • 500 ml c/u</span>
+            <h3 class="product-name">Combo Shampoo + Acondicionador</h3>
+            <p class="product-desc">La combinación esencial de limpieza profunda sin sal y desenredo sedoso con Romero y activos botánicos.</p>
+            <div class="product-badges-mini">
+              <span><i class="fa-solid fa-check"></i> Dúo Completo</span>
+              <span><i class="fa-solid fa-check"></i> Ahorro Especial</span>
+            </div>
+            <div class="product-footer">
+              <div class="price-container">
+                <span class="price-old">$70.000 COP</span>
+                <span class="price-amount highlight-price">$69.000 COP</span>
+              </div>
+              <button class="btn-add-cart" onclick="addToCart('combo', 'Combo Shampoo + Acondicionador', 69000, 'Archivos/Shampoo+Acondicionador.jpg')">
+                <i class="fa-solid fa-plus"></i> Añadir Combo
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 4: Tónico Capilar Revitalizante -->
         <article class="product-card" data-category="tratamiento">
           <div class="product-tag-badge">Tratamiento Raíz</div>
           <div class="product-img-box">
-            <img src="Archivos/Acondicionador.jpeg" alt="Tónico Capilar Botánico Brillitos" class="product-img">
+            <img src="Archivos/Tonico.jpg" alt="Tónico Capilar Botánico Brillitos" class="product-img">
             <button class="quick-view-btn" onclick="openProductModal('tonico')">
               <i class="fa-regular fa-eye"></i> Ver Detalles
             </button>
@@ -326,27 +355,27 @@
             <div class="product-footer">
               <div class="price-container">
                 <span class="price-label">Precio</span>
-                <span class="price-amount">$28.000 COP</span>
+                <span class="price-amount">$15.000 COP</span>
               </div>
-              <button class="btn-add-cart" onclick="addToCart('tonico', 'Tónico Capilar Revitalizante', 28000, 'Archivos/Acondicionador.jpeg')">
+              <button class="btn-add-cart" onclick="addToCart('tonico', 'Tónico Capilar Revitalizante', 15000, 'Archivos/Tonico.jpg')">
                 <i class="fa-solid fa-plus"></i> Añadir
               </button>
             </div>
           </div>
         </article>
 
-        <!-- Product 4: Aceite Elixir Aguacate + Romero -->
+        <!-- Product 5: Aceite de Aguacate con Romero -->
         <article class="product-card" data-category="tratamiento">
           <div class="product-tag-badge">Brillo Espejo</div>
           <div class="product-img-box">
-            <img src="Archivos/Est.jpeg" alt="Aceite Elixir de Aguacate y Romero Brillitos" class="product-img">
+            <img src="Archivos/Aceite.jpg" alt="Aceite de Aguacate con Romero Brillitos" class="product-img">
             <button class="quick-view-btn" onclick="openProductModal('aceite')">
               <i class="fa-regular fa-eye"></i> Ver Detalles
             </button>
           </div>
           <div class="product-details">
             <span class="product-size">Gotero de Precisión • Nutrición Intensa</span>
-            <h3 class="product-name">Aceite de Aguacate + Romero</h3>
+            <h3 class="product-name">Aceite de Aguacate con Romero</h3>
             <p class="product-desc">Nutrición lipídica profunda que sella puntas abiertas, aporta brillo deslumbrante y protege del calor y sol.</p>
             <div class="product-badges-mini">
               <span><i class="fa-solid fa-check"></i> Brillo Oro</span>
@@ -355,20 +384,20 @@
             <div class="product-footer">
               <div class="price-container">
                 <span class="price-label">Precio</span>
-                <span class="price-amount">$30.000 COP</span>
+                <span class="price-amount">$15.000 COP</span>
               </div>
-              <button class="btn-add-cart" onclick="addToCart('aceite', 'Aceite de Aguacate + Romero', 30000, 'Archivos/Est.jpeg')">
+              <button class="btn-add-cart" onclick="addToCart('aceite', 'Aceite de Aguacate con Romero', 15000, 'Archivos/Aceite.jpg')">
                 <i class="fa-solid fa-plus"></i> Añadir
               </button>
             </div>
           </div>
         </article>
 
-        <!-- Product 5: Kit Rutina Completa Esplendor -->
+        <!-- Product 6: Kit Rutina Completa Esplendor -->
         <article class="product-card featured-kit" data-category="kits">
-          <div class="product-tag-badge gold-special">Kit Favorito • Ahorro 15%</div>
+          <div class="product-tag-badge gold-special">Kit Favorito • Rutina 360°</div>
           <div class="product-img-box">
-            <img src="Archivos/rutina capilar.jpg" alt="Kit Completo Rutina Capilar Brillitos" class="product-img">
+            <img src="Archivos/Kit Completo.jpg" alt="Kit Completo Rutina Capilar Brillitos" class="product-img">
             <button class="quick-view-btn" onclick="openProductModal('kit')">
               <i class="fa-regular fa-eye"></i> Ver Detalles
             </button>
@@ -383,10 +412,10 @@
             </div>
             <div class="product-footer">
               <div class="price-container">
-                <span class="price-old">$128.000 COP</span>
-                <span class="price-amount highlight-price">$110.000 COP</span>
+                <span class="price-label">Precio Especial</span>
+                <span class="price-amount highlight-price">$100.000 COP</span>
               </div>
-              <button class="btn-add-cart" onclick="addToCart('kit', 'Kit Completo Despierta tu Luz (4 Productos)', 110000, 'Archivos/rutina capilar.jpg')">
+              <button class="btn-add-cart" onclick="addToCart('kit', 'Kit Completo Despierta tu Luz (4 Productos)', 100000, 'Archivos/Kit Completo.jpg')">
                 <i class="fa-solid fa-plus"></i> Añadir Kit
               </button>
             </div>

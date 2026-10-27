@@ -2,6 +2,7 @@ import os
 import base64
 import mimetypes
 import re
+import urllib.parse
 
 # Streamlit App for Brillitos Línea Capilar
 try:
@@ -65,13 +66,16 @@ def build_standalone_html():
                 data_uri = get_base64_data_uri(file_full_path)
                 
                 # Replace exact path and URL-encoded path in HTML & JS
+                quoted_fname = urllib.parse.quote(fname)
                 variants = [
                     f"Archivos/{fname}",
+                    f"Archivos/{quoted_fname}",
                     f"Archivos/{fname.replace(' ', '%20')}",
                     f"/Archivos/{fname}",
+                    f"/Archivos/{quoted_fname}",
                     f"/Archivos/{fname.replace(' ', '%20')}"
                 ]
-                for v in variants:
+                for v in set(variants):
                     html = html.replace(v, data_uri)
 
     return html

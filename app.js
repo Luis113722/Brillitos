@@ -21,7 +21,7 @@ const PRODUCTS_DATA = {
     name: 'Shampoo Capilar Estimulante (500ml)',
     size: '500 ml • Fórmula Sin Sal',
     price: 35000,
-    image: 'Archivos/shampoo.jpeg',
+    image: 'Archivos/Shampoo.jpg',
     badge: 'Fórmula Sin Sal',
     tagline: 'Crecimiento desde la raíz & nutrición activa',
     desc: 'Elaborado con infusión concentrada de Romero, Canela, Jengibre, Clavito de Olor, Cebolla y Cafeína estimulante. Limpia profundamente el folículo sin remover la barrera lipídica, reactivando el crecimiento y aportando resistencia.',
@@ -50,12 +50,29 @@ const PRODUCTS_DATA = {
       'Presentación de 500ml'
     ]
   },
+  combo: {
+    id: 'combo',
+    name: 'Combo Shampoo + Acondicionador',
+    size: 'Dúo Esencial • 500ml c/u',
+    price: 69000,
+    image: 'Archivos/Shampoo+Acondicionador.jpg',
+    badge: 'Dúo Favorito',
+    tagline: 'Limpieza profunda y desenredo de seda',
+    desc: 'El dúo perfecto para tu rutina de lavado. Incluye Shampoo Capilar Estimulante (500ml) y Acondicionador Romero de Seda (500ml). Limpia suavemente sin sal y desenreda al instante dejando el cabello brillante y manejable.',
+    features: [
+      'Shampoo Capilar 500ml sin sal con cafeína y romero',
+      'Acondicionador Romero de Seda 500ml',
+      'Nutrición y suavidad desde el primer lavado',
+      'Fórmula 100% botánica y libre de crueldad',
+      'Precio especial en combo: $69.000 COP'
+    ]
+  },
   tonico: {
     id: 'tonico',
     name: 'Tónico Capilar Revitalizante',
     size: 'Infusión Concentrada • Gotero / Spray',
-    price: 28000,
-    image: 'Archivos/Acondicionador.jpeg',
+    price: 15000,
+    image: 'Archivos/Tonico.jpg',
     badge: 'Anti-Caída & Vitalidad',
     tagline: 'Tratamiento directo al cuero cabelludo',
     desc: 'Poderosa infusión botánica de Romero silvestre, Jengibre picante, Canela aromática y Clavos de olor. Actúa directamente sobre el folículo para frenar el debilitamiento y potenciar el brillo natural.',
@@ -68,10 +85,10 @@ const PRODUCTS_DATA = {
   },
   aceite: {
     id: 'aceite',
-    name: 'Aceite Elixir de Aguacate + Romero',
+    name: 'Aceite de Aguacate con Romero',
     size: 'Gotero Concentrado • Nutrición Pura',
-    price: 30000,
-    image: 'Archivos/Est.jpeg',
+    price: 15000,
+    image: 'Archivos/Aceite.jpg',
     badge: 'Brillo Espejo & Puntas',
     tagline: 'Nutrición lipídica profunda & protección',
     desc: 'Unión alquímica de aceite puro de aguacate extra virgen prensado en frío con esencia de romero. Nutre la fibra desde el interior, sella las puntas y regala un brillo reflectante que hipnotiza.',
@@ -86,9 +103,9 @@ const PRODUCTS_DATA = {
     id: 'kit',
     name: 'Kit Completo Despierta tu Luz (4 Productos)',
     size: 'Rutina Completa en 3 Pasos',
-    price: 110000,
-    image: 'Archivos/rutina capilar.jpg',
-    badge: 'Ahorro 15% + Envío Preferencial',
+    price: 100000,
+    image: 'Archivos/Kit Completo.jpg',
+    badge: 'Rutina Integral 360°',
     tagline: 'La experiencia definitiva Brillitos',
     desc: 'Incluye los 4 productos esenciales de la línea: Shampoo Capilar (500ml), Acondicionador Desenredante (500ml), Tónico Revitalizante y Aceite Elixir de Aguacate & Romero. Todo lo que necesitas para tu rutina de amor y constancia.',
     features: [
@@ -96,7 +113,7 @@ const PRODUCTS_DATA = {
       'Paso 2: Tónico Capilar de Romero & Jengibre',
       'Paso 3: Aceite Nutritivo de Aguacate + Romero',
       'Regalo especial con tu compra',
-      'Ahorras $18.000 COP sobre el valor individual'
+      'Rutina integral con precio especial de $100.000 COP'
     ]
   }
 };
@@ -399,8 +416,9 @@ function initProductFilters() {
       const filter = btn.getAttribute('data-filter');
 
       cards.forEach(card => {
-        const cat = card.getAttribute('data-category');
-        if (filter === 'all' || cat === filter) {
+        const cat = card.getAttribute('data-category') || '';
+        const categories = cat.split(' ');
+        if (filter === 'all' || categories.includes(filter)) {
           card.style.display = 'flex';
         } else {
           card.style.display = 'none';
