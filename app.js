@@ -38,7 +38,7 @@ const PRODUCTS_DATA = {
     name: 'Acondicionador Romero de Seda (500ml)',
     size: '500 ml • Romero & Mantecas Nutritivas',
     price: 35000,
-    image: 'Archivos/Acindicionador2.jpeg',
+    image: 'Archivos/Acondicionador.jpg',
     badge: 'Desenredo Instantáneo',
     tagline: 'Sellado de cutícula, brillo y suavidad de seda',
     desc: 'Tratamiento desenredante formulado con extracto de Romero y agentes emolientes naturales que transforman hebras enredadas o secas en un velo suave, brillante y manejable.',
@@ -588,6 +588,50 @@ function showToastNotification(msg) {
   }, 2800);
 }
 
+// Hero Carousel Engine (Changes every 2 seconds)
+function initHeroCarousel() {
+  const slides = document.querySelectorAll('.hero-slide');
+  const indicators = document.querySelectorAll('.carousel-indicators .indicator');
+  if (!slides.length) return;
+
+  let currentIndex = 0;
+  const intervalTime = 2000; // 2 seconds
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      if (i === index) {
+        slide.classList.add('active');
+      } else {
+        slide.classList.remove('active');
+      }
+    });
+
+    indicators.forEach((ind, i) => {
+      if (i === index) {
+        ind.classList.add('active');
+      } else {
+        ind.classList.remove('active');
+      }
+    });
+  }
+
+  // Allow clicking indicators directly
+  indicators.forEach(ind => {
+    ind.addEventListener('click', (e) => {
+      const idx = parseInt(e.target.getAttribute('data-index'), 10);
+      if (!isNaN(idx)) {
+        currentIndex = idx;
+        showSlide(currentIndex);
+      }
+    });
+  });
+
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    showSlide(currentIndex);
+  }, intervalTime);
+}
+
 // Newsletter Subscription Handler
 function handleNewsletter() {
   const emailInput = document.getElementById('newsletter-email');
@@ -609,6 +653,7 @@ function handleNewsletter() {
 // Initialize on DOM Ready
 document.addEventListener('DOMContentLoaded', () => {
   initSparkles();
+  initHeroCarousel();
   initProductFilters();
 
   // Cart toggle buttons

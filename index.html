@@ -135,8 +135,23 @@
       <div class="hero-visual-col">
         <div class="visual-card-wrapper">
           <div class="card-glow-ring"></div>
-          <div class="visual-card-main">
-            <img src="Archivos/modelo.jpeg" alt="Modelos luciendo cabello sano y radiante con Brillitos" class="hero-model-img">
+          <div class="visual-card-main hero-carousel" id="hero-carousel">
+            <div class="hero-slides-container">
+              <img src="Archivos/CAPA 1.jpeg" alt="Cuidado Capilar Brillitos - Brillo Natural" class="hero-slide active">
+              <img src="Archivos/CAPA 3.jpeg" alt="Línea Capilar Botánica Brillitos" class="hero-slide">
+              <img src="Archivos/CAPA 4.jpeg" alt="Tratamiento Capilar Brillitos" class="hero-slide">
+              <img src="Archivos/CAPA 5.jpeg" alt="Nutrición y Brillo Brillitos" class="hero-slide">
+              <img src="Archivos/CAPA 6.jpeg" alt="Despierta tu Luz con Brillitos" class="hero-slide">
+              <img src="Archivos/modelo.jpeg" alt="Modelos luciendo cabello sano y radiante con Brillitos" class="hero-slide">
+            </div>
+            <div class="carousel-indicators" id="hero-indicators">
+              <span class="indicator active" data-index="0"></span>
+              <span class="indicator" data-index="1"></span>
+              <span class="indicator" data-index="2"></span>
+              <span class="indicator" data-index="3"></span>
+              <span class="indicator" data-index="4"></span>
+              <span class="indicator" data-index="5"></span>
+            </div>
             <div class="visual-card-overlay">
               <span class="community-pill">
                 <i class="fa-brands fa-instagram"></i> @bril_litos29
@@ -281,7 +296,7 @@
         <article class="product-card" data-category="limpieza">
           <div class="product-tag-badge">Suavidad Extrema</div>
           <div class="product-img-box">
-            <img src="Archivos/Acindicionador2.jpeg" alt="Acondicionador Capilar Romero Brillitos" class="product-img">
+            <img src="Archivos/Acondicionador.jpg" alt="Acondicionador Capilar Romero Brillitos" class="product-img">
             <button class="quick-view-btn" onclick="openProductModal('acondicionador')">
               <i class="fa-regular fa-eye"></i> Ver Detalles
             </button>
@@ -299,7 +314,7 @@
                 <span class="price-label">Precio</span>
                 <span class="price-amount">$35.000 COP</span>
               </div>
-              <button class="btn-add-cart" onclick="addToCart('acondicionador', 'Acondicionador Romero de Seda (500ml)', 35000, 'Archivos/Acindicionador2.jpeg')">
+              <button class="btn-add-cart" onclick="addToCart('acondicionador', 'Acondicionador Romero de Seda (500ml)', 35000, 'Archivos/Acondicionador.jpg')">
                 <i class="fa-solid fa-plus"></i> Añadir
               </button>
             </div>
