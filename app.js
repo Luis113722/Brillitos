@@ -54,7 +54,7 @@ const PRODUCTS_DATA = {
     id: 'combo',
     name: 'Combo Shampoo + Acondicionador',
     size: 'Dúo Esencial • 500ml c/u',
-    price: 69000,
+    price: 68000,
     image: 'Archivos/Shampoo+Acondicionador.jpg',
     badge: 'Dúo Favorito',
     tagline: 'Limpieza profunda y desenredo de seda',
@@ -64,7 +64,7 @@ const PRODUCTS_DATA = {
       'Acondicionador Romero de Seda 500ml',
       'Nutrición y suavidad desde el primer lavado',
       'Fórmula 100% botánica y libre de crueldad',
-      'Precio especial en combo: $69.000 COP'
+      'Precio especial en combo: $68.000 COP'
     ]
   },
   tonico: {
@@ -103,9 +103,9 @@ const PRODUCTS_DATA = {
     id: 'kit',
     name: 'Kit Completo Despierta tu Luz (4 Productos)',
     size: 'Rutina Completa en 3 Pasos',
-    price: 100000,
+    price: 95000,
     image: 'Archivos/Kit Completo.jpg',
-    badge: 'Rutina Integral 360°',
+    badge: 'Oferta Especial • Antes $100.000',
     tagline: 'La experiencia definitiva Brillitos',
     desc: 'Incluye los 4 productos esenciales de la línea: Shampoo Capilar (500ml), Acondicionador Desenredante (500ml), Tónico Revitalizante y Aceite Elixir de Aguacate & Romero. Todo lo que necesitas para tu rutina de amor y constancia.',
     features: [
@@ -113,7 +113,7 @@ const PRODUCTS_DATA = {
       'Paso 2: Tónico Capilar de Romero & Jengibre',
       'Paso 3: Aceite Nutritivo de Aguacate + Romero',
       'Regalo especial con tu compra',
-      'Rutina integral con precio especial de $100.000 COP'
+      'Rutina integral con precio especial de $95.000 COP (Antes $100.000)'
     ]
   }
 };
